@@ -1,0 +1,128 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles with Minecraft-inspired background */
+body {
+    background-image: url('https://minecraft.net/static/images/backgrounds/grass.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container for content */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Heading styles */
+h1 {
+    font-size: 2.5em;
+    color: #1a3c34;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Button styles */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Loading message styles */
+p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Nick list styles */
+#nickList {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 15px;
+    text-align: left;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* Scrollbar styling */
+#nickList::-webkit-scrollbar {
+    width: 8px;
+}
+
+#nickList::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+#nickList::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+#nickList::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Fade-in animation for loading message */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    #nickList {
+        max-height: 300px;
+        font-size: 0.9em;
+    }
+}
